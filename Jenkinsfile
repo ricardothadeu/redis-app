@@ -55,7 +55,7 @@ pipeline {
         }
         stage('Apply k8s files') {
             steps{
-                sh '/usr/local/bin/kubectl apply -f ./k3s/redis/yaml'
+                sh '/usr/local/bin/kubectl apply -f ./k3s/redis.yaml'
                 sh '/usr/local/bin/kubectl apply -f ./k3s/redis-app.yaml'
             }
         }
